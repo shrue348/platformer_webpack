@@ -144,8 +144,10 @@ export class Player {
 
     // context.drawImage(image, this.x, this.y, this.width, this.height);
 
-
-
+    /**
+     * тянем к правому краю
+     */
+    this.x += (context.canvas.width - this.x/* - context.canvas.width * 0.5 */) * 0.01;
 
     /**
      * Проход на сл экран
