@@ -2,7 +2,7 @@ import 'babel-polyfill';
 
 import './../sass/styles.scss';
 
-import { drawMap, aUpdate } from './map';
+import { drawMap } from './map';
 import { Player } from './Player';
 // import { Enemy } from './Enemy';
 import { Rain } from './Rain';
@@ -115,14 +115,12 @@ let score = new Label(
 );
 labels.push(score);
 
-aUpdate();
-
 let gameLoop = function () {
 
 	// выделение тайла
   let tileX: number,
     tileY: number;
-		// value;
+	// value;
   tileX = Math.floor(controller.pointerX / (context.canvas.width / widthMiltipler));
   tileY = Math.floor(controller.pointerY / (context.canvas.height / heightMiltipler));
 	// value = map[tileY * widthMiltipler + tileX];
